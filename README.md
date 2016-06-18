@@ -1,5 +1,5 @@
 # privoox
-perfect your Linux distro
 
+Privoox is built to make Linux easy for everyone. It's new, your help is very much needed in the Wiki:
 
-Privoox is built to make Linux easy for everyone.
+http://privoox.com/privooxwiki
