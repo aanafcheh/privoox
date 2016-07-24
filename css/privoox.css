@@ -1,0 +1,584 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: Ubuntu, sans-serif;
+  font-weight: lighter;
+}
+ul {
+  list-style: georgian;
+}
+a {
+  color: #0e80a4;
+  text-decoration: none;
+}
+h1,h2,h4 {
+  text-shadow: 0 0 1px black;
+  font-weight: lighter;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin-top: 5em;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+}
+.row-content {
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
+}
+.navbar {
+  background: #EEEEEE;
+  box-shadow: 0 0 5px lightgray;
+  border: none;
+  margin: 0;
+}
+
+/*Center the navbar*/
+/*you can change the collapse threshhold of the navbar by customizing bootstrap then downloading it*/
+.container {
+  width: 85%;
+}
+
+/*Make the navbar buttons bigger*/
+
+.navbar-header button {
+  font-size: 20px;
+  /*box-shadow: 0 0 1px lightgray;*/
+  border: none;
+}
+@media (min-width: 768px) {
+  .navbar-header button {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+}
+
+/*keep the navbar aligned with the big logo*/
+
+.navbar-nav {
+  margin-top: 10px;
+}
+
+/*the widthe is set to equalize the distance between the borders around Wiki. If set to 100% then scrollbars appear in the navbar when the navbar is collapsed*/
+
+.navbar-nav li a {
+  margin: 15px;
+  width: 90%;
+  font-size: 18px;
+  text-align: center;
+}
+.navbar-default .navbar-nav li a:hover {
+  color: black;
+}
+
+/*show the borders arround Wiki only in larg screens*/
+
+@media (min-width: 768px) {
+  .navbar-nav-wiki {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+}
+
+/*because the glyphicons are not aligned with the logo*/
+
+.logo {
+  margin-top: 5px;
+}
+
+/*search box*/
+
+.form-control {
+  border: none;
+}
+.form-control:focus {
+  border: 1px solid floralwhite;
+  box-shadow: none;
+}
+
+/*make the placeholder text disappear when the screen is too small to show it*/
+
+@media (max-width: 400px) {
+  .form-control::-webkit-input-placeholder {
+    color: white;
+  }
+  .form-control::-moz-placeholder {
+    color: white;
+  }
+  .form-control:-ms-input-placeholder {
+    color: white;
+  }
+  /* ie */
+  .form-control input:-moz-placeholder {
+    color: white;
+  }
+}
+.btn-inverse {
+  background-color: white;
+  border: 1px solid floralwhite;
+}
+.btn-inverse:hover {
+  background-color: floralwhite;
+}
+
+/*aligne the search box with the navbar only in big screens*/
+
+@media (min-width: 991px) {
+  .input-group {
+    margin-top: 25px;
+  }
+}
+
+/*the width is set to 100% so that the searchbar fills the screen on tablets and mobile phones when the navbar collapses*/
+
+@media (max-width: 991px) {
+  .input-group {
+    width: 100%;
+  }
+}
+
+/*remove the borders and spaces around the search box when the navbar is collapsed*/
+
+.navbar-form {
+  border: none;
+  padding: 0;
+}
+
+/*slogan page*/
+
+.jumbotron {
+  background-color: white;
+  text-align: center;
+  padding-bottom: 0;
+}
+.slogan {
+  padding-left: 15px;
+  color: gray;
+}
+
+/*categories*/
+
+.categories {
+  text-align: center;
+}
+.categories a:not(.wiki) {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  border: none;
+  width: 80%;
+  color: black;
+  font-size: 20px;
+  box-shadow: 0 0 5px lightgray;
+}
+@media (max-width: 400px) {
+  .categories a:not(.wiki) {
+    font-size: 14px;
+  }
+}
+.categories .wiki {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  border: none;
+  width: 50%;
+  color: black;
+  font-size: 20px;
+  box-shadow: 0 0 5px lightgray;
+}
+@media (max-width: 400px) {
+  .categories .wiki {
+    font-size: 14px;
+  }
+}
+.topic {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.topic:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.categories a:hover {
+  box-shadow: 0 0 5px pink;
+}
+.categories .wiki:hover {
+  box-shadow: 0 0 5px pink;
+}
+.categories a:hover .topic {
+  padding-right: 15px;
+}
+.categories a:hover .topic:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*categories icons with small screen sizes*/
+
+.categories .OS {
+  background-image: url("../multimedia/icons/os.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+@media (max-width: 400px) {
+  .categories .OS {
+    background-image: url("../multimedia/icons/os-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .Productivity {
+  background-image: url("../multimedia/icons/Productivity.png");
+  background-repeat: no-repeat;
+  background-position: 5px;
+}
+@media (max-width: 400px) {
+  .categories .Productivity {
+    background-image: url("../multimedia/icons/productivity-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .Office {
+  background-image: url("../multimedia/icons/Office.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+@media (max-width: 400px) {
+  .categories .Office {
+    background-image: url("../multimedia/icons/office-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .Internet {
+  background-image: url("../multimedia/icons/Internet.png");
+  background-repeat: no-repeat;
+  background-position: 1%;
+}
+@media (max-width: 400px) {
+  .categories .Internet {
+    background-image: url("../multimedia/icons/internet-m.png");
+    background-repeat: no-repeat;
+    background-position: 1%;
+  }
+}
+.categories .Programming {
+  background-image: url("../multimedia/icons/Programming.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+@media (max-width: 400px) {
+  .categories .Programming {
+    background-image: url("../multimedia/icons/programming-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .Graphics {
+  background-image: url("../multimedia/icons/Graphics.png");
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+@media (max-width: 400px) {
+  .categories .Graphics {
+    background-image: url("../multimedia/icons/graphics-m.png");
+    background-repeat: no-repeat;
+    background-position: 2%;
+  }
+}
+.categories .Multimedia {
+  background-image: url("../multimedia/icons/Multimedia.png");
+  background-repeat: no-repeat;
+  background-position: 3%;
+}
+@media (max-width: 400px) {
+  .categories .Multimedia {
+    background-image: url("../multimedia/icons/multimedia-m.png");
+    background-repeat: no-repeat;
+    background-position: 3%;
+  }
+}
+.categories .Education {
+  background-image: url("../multimedia/icons/Education.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+@media (max-width: 400px) {
+  .categories .Education {
+    background-image: url("../multimedia/icons/education-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .systemTools {
+  background-image: url("../multimedia/icons/systemTools.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+@media (max-width: 400px) {
+  .categories .systemTools {
+    background-image: url("../multimedia/icons/systemTools-m.png");
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+}
+.categories .wiki {
+  background-image: url("../multimedia/icons/Wiki.png");
+  background-repeat: no-repeat;
+  background-position: 30%;
+}
+
+@media (max-width: 400px) {
+  .categories .wiki {
+    background-image: url("../multimedia/icons/wiki-m.png");
+  }
+}
+@media (max-width: 768px) {
+  .categories .wiki {
+    background-position: 10%;
+    width: 80%;
+  }
+}
+
+/*Website footer*/
+/*Make space between the content and the footer*/
+.footer-spacer {
+  height: 180px;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+	background-color: #EEEEEE;
+  border: none;
+  text-align: center;
+  box-shadow: 0 0 5px lightgray;
+}
+footer a {
+  display: inline-block;
+  padding: 20px 40px;
+  color: black;
+}
+
+/*contact page*/
+.contact-form {
+  line-height: 30px;
+}
+.email-subject {
+  width: 50%;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #EEEEEE;
+  box-shadow: 0 0 5px lightgray;
+}
+.email-content {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  background-color: #EEEEEE;
+  box-shadow: 0 0 5px lightgray;
+}
+.email-submit {
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 50px 10px 50px;
+  background-color: #EEEEEE;
+  box-shadow: 0 0 5px lightgray;
+}
+.email-subject:focus {
+  box-shadow: 0 0 5px pink;
+}
+.email-content:focus {
+  box-shadow: 0 0 5px pink;
+}
+.email-submit:hover {
+  box-shadow: 0 0 5px pink;
+}
+
+/*privacyPolicy Page*/
+.privacy-policy {
+  text-align: center;
+  font-size: 25px;
+  /*text-shadow: 0 0 1px floralwhite;*/
+  line-height: 50px;
+  color: floralwhite;
+}
+@media (max-width: 400px) {
+  .privacy-policy {
+    font-size: 16px;
+    color: black;
+  }
+}
+
+/*Credit Page*/
+.credits p {
+	text-shadow: 0 0 1px black;
+	font-size: 40px;
+}
+
+.credits a {
+  display: inline-block;
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+	text-decoration: none;
+	text-shadow: 0 0 1px white;
+  box-shadow: 0 0 1px white;
+	border: 2px solid white;
+	border-radius: 10px;
+  padding: 20px;
+	color: white;
+  font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .credits a {
+    font-size: 24px;
+    text-shadow: 0 0 2px black;
+  }
+  .credits p {
+  	font-size: 26px;
+  }
+}
+
+.credits a:hover {
+	border: 4px solid pink;
+	box-shadow: 0 0 2px pink;
+}
+
+/*content */
+/*styling in big screens*/
+@media (min-width: 768px) {
+
+  .container-fluid {
+    width: 85%;
+  }
+  .text p:not(.codeContainer) {
+    padding: 5px 100px;
+  }
+  ol {
+    margin: 15px 30px 15px 100px;
+  }
+  legend {
+    text-shadow: 0 0 1px black;
+    font-size: 18px;
+    border: none;
+  }
+  fieldset h1 {
+    font-weight: bold;
+    margin: 25px 50px 10px 100px;
+  }
+  fieldset h2,fieldset h4 {
+    margin: 25px 50px 10px 100px;
+  }
+  fieldset:not(.apps) {
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #EEEEEE;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    box-shadow: 0 0 5px #EEEEEE;
+    line-height: 30px;
+    text-align: justify;
+  }
+  .appWebsiteAddress {
+    margin-left: 100px;
+    margin-bottom: 10px;
+  }
+
+  .tutorialImages {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .codeContainer {
+    background-color: #EEEEEE;
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    box-shadow: 0 0 5px #EEEEEE;
+    padding: 10px 10px 10px 100px;
+  }
+}
+
+/*stylng in small screens*/
+@media (max-width: 767px) {
+  fieldset h1 {
+    font-size: 18px;
+  }
+  fieldset h2 {
+    font-size: 16px;
+  }
+  fieldset h4 {
+    font-size: 14px;
+  }
+  fieldset:not(.apps) {
+    border: 2px solid #EEEEEE;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    box-shadow: 0 0 5px #EEEEEE;
+    text-align: justify;
+  }
+  legend {
+    text-shadow: 0 0 1px black;
+    font-size: 18px;
+    border: none;
+  }
+  .appWebsiteAddress {
+    margin-bottom: 10px;
+  }
+  .tutorialImages {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .codeContainer {
+    background-color: #EEEEEE;
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    box-shadow: 0 0 5px #EEEEEE;
+    text-align: left;
+  }
+}
+
+code {
+  color: black;
+  background: none;
+}
+
+/*alternatives*/
+.appsSpacer {
+  height: 30px;
+}
+
+.apps {
+  border: 2px solid #EEEEEE;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  box-shadow: 0 0 5px #EEEEEE;
+  margin-top: 20px;
+}
+
+.apps a {
+  text-decoration: none;
+}
+
+.apps-text {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

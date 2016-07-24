@@ -1,0 +1,119 @@
+body {
+  padding: 0; /* Gets rid of the automatic padding */
+  margin: 0;	/*	on HTML documents */
+  height: 100%;
+  font-family: Ubuntu, sans-serif;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto;
+	position: relative;
+}
+
+legend {
+  text-shadow: 0 0 1px black;
+  font-size: 18px;
+}
+
+fieldset:not(.alternatives) {
+  width: 70%;
+  border: 2px solid #EEEEEE;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  box-shadow: 0 0 5px #EEEEEE;
+  line-height: 30px;
+  text-align: justify;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Content*/
+/*using text:not(.codeContainer) was not possible even though I added .codeContainer in a div. So, I had to specify it for paragraphs instead. This way I had to specify a margin for each text in the .text which has a tag other than <p> . This was all done to let the <code> have a free margin.*/
+.text p:not(.codeContainer) {
+  margin: 15px 50px 15px 50px;
+  font-family: Ubuntu, sans-serif;
+}
+
+.text a {
+  font-family: Ubuntu, sans-serif;
+  text-decoration: none;
+  /*color: #419011;*/
+  color: #0e80a4;
+}
+
+ul {
+  list-style: georgian;
+}
+
+ol {
+  margin: 15px 30px 15px 30px;
+  font-family: Ubuntu, sans-serif;
+}
+
+
+h1 {
+  font-family: Ubuntu, sans-serif;
+  text-shadow: 0 0 1px black;
+  margin: 50px 50px 30px 50px;
+}
+
+h2 {
+  font-family: Ubuntu, sans-serif;
+  text-shadow: 0 0 1px black;
+  margin: 50px 50px 30px 50px;
+}
+
+.tutorialImages {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/*Apps official website address*/
+.appWebsiteAddress {
+  margin-left: 50px;
+
+}
+
+.appWebsiteAddress img {
+  vertical-align: middle;
+}
+
+/*Terminl code*/
+.codeContainer {
+  background-color: #EEEEEE;
+  border: 2px solid;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  border-radius: 2px;
+  box-shadow: 0 0 5px #EEEEEE;
+  padding: 10px 0 10px 50px;
+}
+
+/*Alternatives*/
+.alternativesSpacer {
+  height: 30px;
+}
+
+.alternatives {
+  border: 2px solid #EEEEEE;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  box-shadow: 0 0 5px #EEEEEE;
+  line-height: 30px;
+  text-align: center;
+}
+
+.alternatives a {
+  margin: 50px;
+  text-decoration: none;
+  color: #0e80a4;
+}
+
+.alternatives img {
+  margin: 0 10px 0 50px;
+}
+
+span {
+  display: inline-block;
+  text-align: left;
+}
